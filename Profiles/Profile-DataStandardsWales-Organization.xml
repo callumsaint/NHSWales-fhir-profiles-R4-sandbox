@@ -57,10 +57,6 @@
       <path value="Organization.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Organization.identifier:callumsslice">
-      <path value="Organization.identifier" />
-      <sliceName value="callumsslice" />
-    </element>
     <element id="Organization.active">
       <path value="Organization.active" />
       <comment value="A status of the organization (i.e., whether is still active ) SHOULD be populated if the data exists.&#xD;&#xA;&#xD;&#xA;This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.&#xA;&#xA;This element is labeled as a modifier because it may be used to mark that the resource was created in error." />

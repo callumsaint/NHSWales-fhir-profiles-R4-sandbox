@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-MedicationStatement" />
+  <name value="DataStandardsWalesMedicationStatement" />
+  <title value="Data Standards Wales MedicationStatement Profile" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement.extension">
+      <path value="MedicationStatement.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="MedicationStatement.extension:medicationCourseOfTherapyType">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="medicationCourseOfTherapyType" />
+      <short value="An indicator of the overall pattern of medication administration" />
+      <definition value="An extension to carry an indicator of the overall pattern of medication administration at the MedicationStatement level." />
+      <comment value="An extension to carry an indicator of the overall pattern of medication administration at the MedicationStatement level." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.wales/StructureDefinition/Extension-DataStandardsWales-MedicationCourseOfTherapyType" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.context">
+      <path value="MedicationStatement.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-EpisodeOfCare" />
+        <targetProfile value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Encounter" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dateAsserted">
+      <path value="MedicationStatement.dateAsserted" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.informationSource">
+      <path value="MedicationStatement.informationSource" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
+        <targetProfile value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Organization" />
+        <targetProfile value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Patient" />
+        <targetProfile value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-Practitioner" />
+        <targetProfile value="https://fhir.nhs.wales/StructureDefinition/DataStandardsWales-PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

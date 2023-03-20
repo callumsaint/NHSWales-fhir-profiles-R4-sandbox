@@ -23,6 +23,23 @@
       <sliceName value="odsSiteCode" />
       <max value="0" />
     </element>
+    <element id="Location.identifier:wrtsLocationIdentifier">
+      <path value="Location.identifier" />
+      <sliceName value="wrtsLocationIdentifier" />
+      <short value="The WRTS identifier for the location" />
+      <definition value="The Welsh Reference Data Servcie identifier for the location" />
+      <max value="1" />
+    </element>
+    <element id="Location.identifier:wrtsLocationIdentifier.system">
+      <path value="Location.identifier.system" />
+      <short value="WRTS location identifier" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.wales/Id/wrts-location-identifier" />
+    </element>
+    <element id="Location.identifier:wrtsLocationIdentifier.value">
+      <path value="Location.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="Location.status">
       <path value="Location.status" />
       <comment value="The status of the location (i.e., whether it is active, suspended or inactive) SHOULD be populated if the data exists." />

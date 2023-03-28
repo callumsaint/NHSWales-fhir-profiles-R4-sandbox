@@ -21,7 +21,7 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
   </differential>
 </StructureDefinition>
